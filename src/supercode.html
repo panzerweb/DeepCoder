@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>DeepCoder</title>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="./css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/custom/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-success fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="#">
+            <!-- Logo -->
+             Logo
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z"/>
+              </svg>
+          </button>
+          <div class="offcanvas offcanvas-end bg-success" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Logo</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg text-light" viewBox="0 0 16 16">
+                  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="./index.html">Home</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <div class="container-lg">
+          <div class="row justify-content-between">
+
+            <!-- Timer -->
+             
+            <div class="col-6">
+              <div class="shadow border border-1 p-5 my-2">
+                <img src="..." class="img-fluid" alt="Pixelated Image">
+              </div>
+              <div class="shadow border border-1 p-3 my-2 text-center">
+                  <span class="fs-1 fw-bold">00</span>:
+                  <span class="fs-1 fw-bold">00</span>:
+                  <span class="fs-1 fw-bold">00</span>
+              </div>
+              <div class="btn-group mx-auto w-100" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                  </svg>
+                </button>
+                <button type="button" class="btn btn-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16">
+                    <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/>
+                  </svg>
+                </button>
+                <button type="button" class="btn btn-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Todo List -->
+
+            <div class="col-6">
+                <div class="mb-3">
+                  <label for="taskInput" class="form-label fw-semibold fs-4">Add Task:</label>
+                  <div class="input-group">
+                    <input type="text" id="taskInput" class="form-control" placeholder="Enter task">
+                    <button class="btn btn-warning" type="button">+</button>
+                  </div>
+                </div>
+
+                <!-- Tasks -->
+                <div class="card p-3 mb-3" style="position: relative;">
+                  <div class="d-flex align-items-start">
+                    <!-- Checkbox -->
+                    <div class="me-3">
+                      <input class="form-check-input" type="checkbox" value="" id="taskCheckbox">
+                    </div>
+                
+                    <!-- Content -->
+                    <div class="flex-grow-1">
+                      <h5 class="card-title mb-1">Task Title</h5>
+                      <p class="card-text">This is a short description of the task.</p>
+                    </div>
+                
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                      <button class="btn btn-light btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+    </main>
+  </body>
+
+  <!-- Scripts -->
+  <script defer src="./js/renderer.js"></script>
+  <script src="./css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  <script src="./css/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</html>

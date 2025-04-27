@@ -9,7 +9,9 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
-        preload: path.join(__dirname, 'preload.js')
+        preload: path.join(__dirname, 'preload.js'),
+        nodeIntegration: false,
+        contextIsolation: true, // This should be true to avoid mixing the contexts
     }
   })
 
@@ -20,13 +22,15 @@ const createWindow = () => {
   win.loadFile('./src/index.html')
 }
 // CREATE DEEPCODING WINDOW
-const createDeepCodingWindow = () => {
+const createSuperDeepCodingWindow = () => {
     const win = new BrowserWindow({
-      title: 'DeepCoder',
+      title: 'Super Deep Coding',
       width: 800,
       height: 600,
       webPreferences: {
-          preload: path.join(__dirname, 'preload.js')
+          preload: path.join(__dirname, 'preload.js'),
+          nodeIntegration: false,
+          contextIsolation: true, // This should be true to avoid mixing the contexts
       }
     })
   
@@ -34,12 +38,17 @@ const createDeepCodingWindow = () => {
       // win.webContents.openDevTools();
     }
   
-    win.loadFile('./src/deepcoding.html')
+    win.loadFile('./src/supercode.html')
 }
 //APP IS READY
 app.whenReady().then(() => {
     ipcMain.handle('ping', () => 'pong')
     createWindow()
+    
+    // Opens supercode.html
+    ipcMain.on('open-super-window', () => {
+      createSuperDeepCodingWindow();
+    })
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()

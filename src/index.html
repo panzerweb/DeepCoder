@@ -13,61 +13,64 @@
     />
     <title>DeepCoder</title>
 
-    <!-- CSS SCRIPTS -->
-    <!-- Tailwind Output -->
-    <link href="./css/output.css" rel="stylesheet">
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="./css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
 
   </head>
   <body>
     <header>
-        <div class="text-center my-10">
-            <div class="flex justify-center items-center">
+        <div class="text-center my-5">
+            <div class="d-flex justify-content-center align-items-center">
               <img src="#" alt="DeepCoder Logo" width="100">
-              <h1 class="text-5xl pb-2">DeepCoder</h1>
+              <h1 class="pb-2 fs-1">DeepCoder</h1>
             </div>
-            <p class="text-base">A coder's partner to productivity</p>
+            <p class="lead">A coder's partner to productivity</p>
         </div>
     </header>
     <main>
-        <h3 class="text-center text-3xl pb-3 mt-5">Select An Option:</h3>
-        <div class="flex flex-wrap justify-center items-center gap-5">
-
-          <!-- Super Deep Coding -->
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm p-5">
-            <div class="flex flex-col items-center">
-                <a href="">
-                  <img class="w-40 h-40 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
-                </a>
-                <h5 class="mb-1 text-xl font-medium text-gray-900">Super Deep Coding</h5>
-                <span class="text-sm text-gray-500 dark:text-gray-400">4 Hours</span>
+      <div class="container pt-1 pb-3">
+        <div class="row g-4 justify-content-center">
+          <div class="col-4 col-md-4 col-lg-4">
+            <div class="card text-center shadow-sm h-100 border-0 hover-lift small-card">
+              <a href="./supercode.html">
+                <img src="./images/level10.svg" class="card-img-top mx-auto mt-4 rounded-circle shadow p-2 card-img-custom" alt="Super Deep Coding">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Super Deep Coding</h5>
+                <p class="card-text text-muted">4 Hours</p>
+              </div>
             </div>
-          </div>  
-            
-          <!-- Deep Coding -->
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm p-5">
-            <div class="flex flex-col items-center">
-                <a href="">
-                  <img class="w-40 h-40 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
-                </a>
-                <h5 class="mb-1 text-xl font-medium text-gray-900">Deep Coding</h5>
-                <span class="text-sm text-gray-500 dark:text-gray-400">3 Hours</span>
+          </div>
+      
+          <div class="col-4 col-md-4 col-lg-4">
+            <div class="card text-center shadow-sm h-100 border-0 hover-lift small-card">
+              <a href="#">
+                <img src="./images/level9.svg" class="card-img-top mx-auto mt-4 rounded-circle shadow p-2 card-img-custom" alt="Deep Coding">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Deep Coding</h5>
+                <p class="card-text text-muted">3 Hours</p>
+              </div>
             </div>
-          </div>  
-
-          <!-- Coder Habit -->
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm p-5">
-            <div class="flex flex-col items-center">
-                <a href="">
-                  <img class="w-40 h-40 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
-                </a>
-                <h5 class="mb-1 text-xl font-medium text-gray-900">Coder's Habit</h5>
-                <span class="text-sm text-gray-500 dark:text-gray-400">1 Hour</span>
+          </div>
+      
+          <div class="col-4 col-md-4 col-lg-4">
+            <div class="card text-center shadow-sm h-100 border-0 hover-lift small-card">
+              <a href="#">
+                <img src="./images/level8.svg" class="card-img-top mx-auto mt-4 rounded-circle shadow p-2 card-img-custom" alt="Coder Habit">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Coder Habit</h5>
+                <p class="card-text text-muted">1 Hour</p>
+              </div>
             </div>
-          </div>  
+          </div>
         </div>
+      </div>
     </main>
   </body>
 
+  <!-- Scripts -->
   <script src="./js/renderer.js"></script>
-  <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="./css/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </html>
