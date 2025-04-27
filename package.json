@@ -1,0 +1,29 @@
+{
+  "name": "deepcoder",
+  "productName": "DeepCoder",
+  "version": "1.0.0",
+  "description": "A Desktop Application: Timer + Todo App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panzerweb/DeepCoder.git"
+  },
+  "author": "Panzerweb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/panzerweb/DeepCoder/issues"
+  },
+  "homepage": "https://github.com/panzerweb/DeepCoder#readme",
+  "devDependencies": {
+    "electron": "^35.2.1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "flowbite": "^3.1.2",
+    "tailwindcss": "^4.1.4"
+  }
+}

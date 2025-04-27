@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>DeepCoder</title>
+
+    <!-- CSS SCRIPTS -->
+    <!-- Tailwind Output -->
+    <link href="./css/output.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+        <div class="text-center my-10">
+            <div class="flex justify-center items-center">
+              <img src="#" alt="DeepCoder Logo" width="100">
+              <h1 class="text-5xl pb-2">DeepCoder</h1>
+            </div>
+            <p class="text-base">A coder's partner to productivity</p>
+        </div>
+    </header>
+    <main>
+        <h3 class="text-center text-3xl pb-3 mt-5">Select An Option:</h3>
+        <div class="flex flex-wrap justify-center items-center gap-5">
+
+          <!-- Super Deep Coding -->
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm p-5">
+            <div class="flex flex-col items-center">
+                <a href="">
+                  <img class="w-40 h-40 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+                </a>
+                <h5 class="mb-1 text-xl font-medium text-gray-900">Super Deep Coding</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">4 Hours</span>
+            </div>
+          </div>  
+            
+          <!-- Deep Coding -->
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm p-5">
+            <div class="flex flex-col items-center">
+                <a href="">
+                  <img class="w-40 h-40 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+                </a>
+                <h5 class="mb-1 text-xl font-medium text-gray-900">Deep Coding</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">3 Hours</span>
+            </div>
+          </div>  
+
+          <!-- Coder Habit -->
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm p-5">
+            <div class="flex flex-col items-center">
+                <a href="">
+                  <img class="w-40 h-40 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+                </a>
+                <h5 class="mb-1 text-xl font-medium text-gray-900">Coder's Habit</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">1 Hour</span>
+            </div>
+          </div>  
+        </div>
+    </main>
+  </body>
+
+  <script src="./js/renderer.js"></script>
+  <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+</html>
